@@ -1,0 +1,204 @@
+.tab-wrap {
+	background: rgb(230, 228, 169);
+	box-shadow: 0 0 5px rgba(0,0,0,.1);
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	padding: 0 0 0px;
+}
+.subject {
+	max-width: 1000px;
+	max-height: 1000px;
+}
+
+.tab-label {
+	color: rgb(146, 145, 145);
+	cursor: pointer;
+	flex: 1;
+	font-weight: bold;
+	order: -1;
+	padding: 12px 24px;
+    position: relative;
+	text-align: center;
+	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s;
+	user-select: none;
+	white-space: nowrap;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.tab-label:hover {
+	background: rgb(230, 228, 169);
+}
+
+.tab-switch:checked + .tab-label {
+	color: DeepSkyBlue;
+}
+
+.tab-label::after {
+	background: DeepSkyBlue;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 3px;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transform: translateX(100%);
+	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s 80ms;
+	width: 100%;
+    z-index: 1;
+    order: -1;
+}
+
+.tab-switch:checked ~ .tab-label::after {
+	transform: translateX(-100%);
+}
+
+.tab-switch:checked + .tab-label::after {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.tab-content {
+	opacity:0;
+	padding: 0 20px;
+	pointer-events:none;
+	transform: translateX(-30%);
+	transition: transform .3s 80ms, opacity .3s 80ms;
+	max-width: 100%;
+	max-height: auto;
+}
+
+.tab-switch:checked ~ .tab-content {
+	transform: translateX(30%);
+}
+
+.tab-switch:checked + .tab-label + .tab-content {
+	opacity: 1;
+	order: 1;
+	pointer-events:auto;
+	transform: translateX(0);
+}
+
+.tab-wrap::after {
+	content: '';
+	height: 0px;
+	order: -1;
+	width: 100%;
+	height: auto;
+}
+
+.tab-switch {
+	display: none;
+}
+
+/* ============================== */
+
+body {
+	background: rgb(230, 228, 169);
+    font-family: sans-serif;
+	margin: 0px;
+}
+
+
+button.btn--humanity {
+	border-radius: 100%;
+	line-height: 30px;		/*行間*/
+	width: 190px;
+	height: 190px;
+	position: relative;
+	top: 140px;
+	left: 20px;
+	padding: 0;				/*余白*/
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+	background-color: #e6d900;
+	-webkit-box-shadow: 0 5px 0 #e6d900;
+	box-shadow: 0 5px 0 #e6d900;
+  }
+  button.btn--global {
+	border-radius: 100%;
+	line-height: 30px;		/*行間*/
+	width: 190px;
+	height: 190px;
+	position: relative;
+	top: 310px;
+	padding: 20px;				/*余白*/
+	font-size: 15px;
+	text-align: center;
+	color: #fff;
+	background-color: #e6d900;
+	-webkit-box-shadow: 0 5px 0 #e6d900;
+	box-shadow: 0 5px 0 #e6d900;
+  }
+  button.btn--theology {
+	border-radius: 100%;
+	line-height: 30px;		/*行間*/
+	width: 190px;
+	height: 190px;
+	position: relative;
+	top: 240px;
+	padding: 20px;				/*余白*/
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+	background-color: #e6d900;
+	-webkit-box-shadow: 0 5px 0 #e6d900;
+	box-shadow: 0 5px 0 #e6d900;
+  }
+  button.btn--health {
+	border-radius: 100%;
+	line-height: 30px;		/*行間*/
+	width: 190px;
+	height: 190px;
+	position: relative;
+	top: 50px;
+	padding: 20px;				/*余白*/
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+	background-color: #e6d900;
+	-webkit-box-shadow: 0 5px 0 #e6d900;
+	box-shadow: 0 5px 0 #e6d900;
+  }
+  button.btn--engineer {
+	border-radius: 100%;
+	line-height: 30px;		/*行間*/
+	width: 190px;
+	height: 190px;
+	position: relative;
+	top: 150px;
+	padding: 20px;				/*余白*/
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+	background-color: #e6d900;
+	-webkit-box-shadow: 0 5px 0 #e6d900;
+	box-shadow: 0 5px 0 #e6d900;
+  }
+  button.btn--sw {
+	border-radius: 100%;
+	line-height: 30px;		/*行間*/
+	width: 190px;
+	height: 190px;
+	position: relative;
+	top: 200px;
+	left: 550px;
+	padding: 0,0,10px;
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+	background-color: #e6d900;
+	-webkit-box-shadow: 0 5px 0 #e6d900;
+	box-shadow: 0 5px 0 #e6d900;
+  }
+  /* :hoverは疑似クラスの一つで、マウスポインタを要素の上に置いているとき実行される
+  	　疑似クラス = 要素が特定の状態になっているときだけ実行される*/
+  button.btn--circle:hover {
+	-webkit-transform: translate(0, 3px);
+	transform: translate(0, 3px);
+	-webkit-box-shadow: 0 2px 0 #e6d900;
+	box-shadow: 0 2px 0 #e6d900;
+  }
