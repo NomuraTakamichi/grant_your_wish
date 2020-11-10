@@ -2,9 +2,211 @@
 <html lang="ja">
     <head>
         <meta charset = "utf-8">
-        <title>Grant Your Wish</title>
+        <title>トンアリ</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel = "stylesheet" href = "school_subject.css"> 
     </head>
-    <body>
+    <body>     
+        <div class="tonari-container">
+            <!--
+            <a class="et-hero-tab" href="#tab-home">home</a>
+            <a class="et-hero-tab" href="#tab-japan">日本人留学生会</a>
+            <a class="et-hero-tab" href="#tab-hjpa">HJPA</a>
+            <a class="et-hero-tab" href="#tab-school">学科紹介</a>
+            <a class="et-hero-tab" href="#tab-tonari">トンアリ</a>
+            -->
+            <a class="tonari-tab" href="../home.html">home</a>
+            <a class="tonari-tab" href="../japan/japan.html">日本人留学生会</a>
+            <a class="tonari-tab" href="../hjpa/hjpa.html">HJPA</a>
+            <a class="tonari-tab" href="#tab-home">学科紹介</a>
+            <a class="tonari-tab" href="../tonari/tonari.html">トンアリ</a>
+        </div>
 
+        <div class="page-wrap wrapper tog">
+            <nav id="sidebar" class="leftbar-wrap">
+                <!-- sidebar-search  -->
+                <div class="leftbar-menu">
+                    <ul>
+                    <li class="header-menu" href = "tab-home">
+                        <span>学科紹介</span>
+                    </li>
+                    <li class="leftbar-dropdown">
+                        <a href="javascript:void(0)">           <!-- href = "#"：画面先頭に移動-->
+                            <i class="child child-social"></i>
+                            <span>人文社会大学(인문사회대학)</span>
+                        </a>
+                        <div class="leftbar-submenu">
+                            <ul>
+                              <li><a href="#social1">国語国文学科</a></li>
+                              <li><a href="#social2">グローバル韓国語学科</a></li>
+                              <li><a href="#social3">歴史文化コンテンツ学科</a></li>
+                              <li><a href="#social4">視覚デザイン学科</a></li>
+                              <li><a href="#social5">メディアコミュニケーション学科</a></li>
+                              <li><a href="#social6">相談心理社会福祉学科</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="leftbar-dropdown">
+                        <a href="javascript:void(0)">
+                            <i class="child child-business"></i>
+                            <span>グローバルビジネス大学(글로벌비즈니스대학)</span>
+                        </a>
+                        <div class="leftbar-submenu">
+                            <ul>
+                              <li><a href="#business1">国際経済通称学科</a></li>
+                              <li><a href="#business2">国際レジャー観光学科</a></li>
+                              <li><a href="#business3">IT経営学科</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="leftbar-dropdown">
+                        <a href="javascript:void(0)">
+                            <i class="childr child-theology"></i>
+                            <span>神学大学(신학대학)</span>
+                        </a>
+                        <div class="leftbar-submenu">
+                            <ul>
+                              <li><a href="#theology">神学純潔大学</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="leftbar-dropdown">
+                        <a href="javascript:void(0)">
+                            <i class="child child-health"></i>
+                            <span>健康保険大学(건강보건대학)</span>
+                        </a>
+                        <div class="leftbar-submenu">
+                            <ul>
+                              <li><a href="#health1">BT融合製薬工学科</a></li>
+                              <li><a href="#health2">看護学科</a></li>
+                              <li><a href="#health3">物理治療学科</a></li>
+                              <li><a href="#health4">歯衛生学科</a></li>
+                              <li><a href="#health5">応急救援学科学科</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="leftbar-dropdown">
+                        <a href="javascript:void(0)">
+                            <i class="child child-engineer"></i>
+                            <span>工科大学(공과대학)</span>
+                        </a>
+                        <div class="leftbar-submenu">
+                            <ul>
+                              <li><a href="#engineer1">機械ICT融合工学部</a></li>
+                              <li><a href="#engineer2">新素材工学科</a></li>
+                              <li><a href="#engineer3">環境生命化学工学科</a></li>
+                              <li><a href="#engineer4">産業経営工学科</a></li>
+                              <li><a href="#engineer5">電子工学科</a></li>
+                              <li><a href="#engineer6">建築社会環境学部</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="leftbar-dropdown">
+                        <a href="javascript:void(0)">
+                            <i class="child child-sw"></i>
+                            <span>SW融合大学(SW융합대학)</span>
+                        </a>
+                        <div class="leftbar-submenu">
+                            <ul>
+                                <li><a href="#sw1">スマート自動車工学部</a></li>
+                                <li><a href="#sw2">コンピュータ工学部</a></li>
+                                <li><a href="#sw3">AIソフトウェア学科</a></li>
+                                <li><a href="#sw4">ソフトウェア融合学部</a></li>
+                                <li><a href="#sw5">IT教育学部</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Main -->
+        <main class="main">
+            <section class="tonari-slide home" id="tab-home">
+                <h1>学科紹介</h1>
+                <h3>~　~</h3>
+            </section>
+            <section class="tonari-slide social" id="social1">
+                <h1>国語国文学科</h1>
+            </section>
+            <section class="tonari-slide social" id="social2">
+                <h1>グローバル韓国語学科</h1>
+            </section>
+            <section class="tonari-slide social" id="social3">
+                <h1>歴史文化コンテンツ学科</h1>
+            </section>
+            <section class="tonari-slide social" id="social4">
+                <h1>視覚デザイン学科</h1>
+            </section>
+            <section class="tonari-slide social" id="social5">
+                <h1>メディアコミュニケーション学科</h1>
+            </section>
+            <section class="tonari-slide social" id="social6">
+                <h1>相談心理社会福祉学科</h1>
+            </section>
+            <section class="tonari-slide business" id="business1">
+                <h1>国際経済通称学科</h1>
+            </section>
+            <section class="tonari-slide business" id="business2">
+                <h1>国際レジャー観光学科</h1>
+            </section>
+            <section class="tonari-slide business" id="business3">
+                <h1>IT経営学科</h1>
+            </section>
+            <section class="tonari-slide theology" id="theology">
+                <h1>神学純潔大学</h1>
+            </section>
+            <section class="tonari-slide health" id="health1">
+                <h1>BT融合製薬工学科</h1>
+            </section>
+            <section class="tonari-slide health id="health2">
+                <h1>看護学科</h1>
+            </section>
+            <section class="tonari-slide health" id="health3">
+                <h1>物理治療学科</h1>
+            </section>
+            <section class="tonari-slide health" id="health4">
+                <h1>歯衛生学科</h1>
+            </section>
+            <section class="tonari-slide health" id="health5">
+                <h1>応急救援学科学科</h1>
+            </section>
+            <section class="tonari-slide engineer" id="engineer1">
+                <h1>機械ICT融合工学部</h1>
+            </section>
+            <section class="tonari-slide engineer" id="engineer2">
+                <h1>新素材工学科</h1>
+            </section>
+            <section class="tonari-slide engineer" id="engineer3">
+                <h1>環境生命化学工学科</h1>
+            </section>
+            <section class="tonari-slide engineer" id="engineer4">
+                <h1>産業経営工学科</h1>
+            </section>
+            <section class="tonari-slide engineer" id="engineer5">
+                <h1>電子工学科</h1>
+            </section>
+            <section class="tonari-slide engineer" id="engineer6">
+                <h1>建築社会環境学部</h1>
+            </section>
+            <section class="tonari-slide sw" id="sw1">
+                <h1>スマート自動車工学部</h1>
+            </section>
+            <section class="tonari-slide sw" id="sw2">
+                <h1>コンピュータ工学部</h1>
+            </section>
+            <section class="tonari-slide sw" id="sw3">
+                <h1>AIソフトウェア学科</h1>
+            </section>
+            <section class="tonari-slide sw" id="sw4">
+                <h1>ソフトウェア融合学部</h1>
+            </section>
+            <section class="tonari-slide sw" id="sw5">
+                <h1>IT教育学部</h1>
+            </section>
+        </main> 
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <script src="school_subject.js"></script>
     </body>
 </html>

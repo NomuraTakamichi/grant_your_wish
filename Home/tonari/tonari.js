@@ -5,7 +5,7 @@ class StickyNavigation {
         this.currentTab = null;
         this.tabContainerHeight = 70;
         let self = this;
-        $('.tab').click(function() { 
+        $('.line-tab').click(function() { 
             self.onTabClick(event, $(this)); 
         });
         $(window).scroll(() => { this.onScroll(); });
@@ -30,12 +30,12 @@ class StickyNavigation {
     }
     
     checkTabContainerPosition() {
-        let offset = $('.tabs-container').offset().top + $('.tabs-container').height() - this.tabContainerHeight;
+        let offset = $('.tonari-container').offset().top + $('.tonari-container').height() - this.tabContainerHeight;
         if($(window).scrollTop() > offset) {
-            $('.tabs-container').addClass('tabs-container--top');
+            $('.tonari-container').addClass('tonari-container--top');
         } 
         else {
-            $('.tabs-container').removeClass('tabs-container--top');
+            $('.tonari-container').removeClass('tonari-container--top');
         }
     }
     
@@ -43,7 +43,7 @@ class StickyNavigation {
         let newCurrentId;
         let newCurrentTab;
         let self = this;
-        $('.tab').each(function() {
+        $('.line-tab').each(function() {
             let id = $(this).attr('href');
             let offsetTop = $(id).offset().top - self.tabContainerHeight;
             let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
@@ -66,10 +66,40 @@ class StickyNavigation {
             width = this.currentTab.css('width');
             left = this.currentTab.offset().left;
         }
-        $('.tab-slider').css('width', width);
-        $('.tab-slider').css('left', left);
+        $('.line-slider').css('width', width);
+        $('.line-slider').css('left', left);
     }
     
 }
 
 new StickyNavigation();
+
+$(".leftbar-dropdown > a").click(function() {
+    $(".leftbar-submenu").slideUp(200);
+    if (
+      $(this)
+        .parent()
+        .hasClass("active")
+    ) {
+      $(".leftbar-dropdown").removeClass("active");
+      $(this)
+        .parent()
+        .removeClass("active");
+    } else {
+      $(".leftbar-dropdown").removeClass("active");
+      $(this)
+        .next(".leftbar-submenu")
+        .slideDown(200);
+      $(this)
+        .parent()
+        .addClass("active");
+    }
+  });
+  
+  $("#close-sidebar").click(function() {
+    $(".page-wrap").removeClass("tog");
+  });
+  $("#side-show").click(function() {
+    $(".page-wrap").addClass("tog");
+  });
+  

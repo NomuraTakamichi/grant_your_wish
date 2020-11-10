@@ -8,7 +8,7 @@ a {
 }
 
 .et-hero-tabs,
-.et-slide {
+.slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,22 +31,22 @@ h3 {
 }
 
 
-.et-hero-tabs-container {
+.tabs-container {
   display: flex;
   flex-direction: row;
   position: fixed;
   top: 0;
   width: 100%;
   height: 70px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px rgba(48, 176, 235, 0.1);
   background:#fff;
   z-index: 10;
 }
-.et-hero-tabs-container:hover{
+.tabs-container:hover{
   position: fixed;
   top: 0;
 }
-.et-hero-tab {
+.tab {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,23 +56,24 @@ h3 {
   transition: all 0.5s ease;
   font-size: 0.8rem;
 }
-.et-hero-tab:hover {
+.tab:hover {
   color:rgb(243, 238, 211);
-  background: rgba(102,177,241,0.8);
+  background: #e2d58b;
   transition: all 0.5s ease;
 }
-.et-hero-tab-slider {
+.tab-slider {
   position: absolute;
   bottom: 0;
   width: 0;
   height: 6px;
-  background: #66B1F1;
+  background: #e2d58b;
   transition: else 0.3s ease;
 }
 
   /*	button	 */
 button.btn--humanity {
-	border-radius: 100%;
+	display: inline-block;
+	border-radius: 50%;
 	line-height: 30px;		/*行間*/
 	width: 190px;
 	height: 190px;
@@ -82,13 +83,15 @@ button.btn--humanity {
 	padding: 0;				/*余白*/
 	font-size: 18px;
 	text-align: center;
-	color: #fff;
-	background-color: #e4e3d6;
+	color: rgb(82, 142, 150);
+	background: #e4e3d6;
 	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
-  }
+	box-shadow: inset 0px 3px 0 rgba(255,255,255,0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
+}
   button.btn--global {
-	border-radius: 100%;
+	border-radius: 50%;
 	line-height: 30px;		/*行間*/
 	width: 190px;
 	height: 190px;
@@ -96,13 +99,15 @@ button.btn--humanity {
 	top: 30%;			/*余白*/
 	font-size: 15px;
 	text-align: center;
-	color: #fff;
-	background-color: #caf1bb;
+	color: rgb(82, 142, 150);
+	background-color: #b0f096;
 	-webkit-box-shadow: 0 5px 0 #e6d900;
 	box-shadow: 0 5px 0 #e6d900;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
   }
   button.btn--theology {
-	border-radius: 100%;
+	border-radius: 50%;
 	line-height: 30px;		/*行間*/
 	width: 190px;
 	height: 190px;
@@ -110,13 +115,15 @@ button.btn--humanity {
 	top: 30%;
 	font-size: 18px;
 	text-align: center;
-	color: #fff;
-	background-color: #f2f54f;
+	color: rgb(82, 142, 150);
+	background-color: #f3f582;
 	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
+	box-shadow: inset 0px 3px 0 rgba(255,255,255,0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
   }
   button.btn--health {
-	border-radius: 100%;
+	border-radius: 50%;
 	line-height: 30px;		/*行間*/
 	width: 190px;
 	height: 190px;
@@ -124,13 +131,15 @@ button.btn--humanity {
 	top: 30%;
 	font-size: 18px;
 	text-align: center;
-	color: #fff;
+	color: rgb(82, 142, 150);
 	background-color: #fce358;
 	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
+	box-shadow: inset 0px 3px 0 rgba(255,255,255,0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
   }
   button.btn--engineer {
-	border-radius: 100%;
+	border-radius: 50%;
 	line-height: 30px;		/*行間*/
 	width: 190px;
 	height: 190px;
@@ -138,13 +147,15 @@ button.btn--humanity {
 	top: 30%;
 	font-size: 18px;
 	text-align: center;
-	color: #fff;
-	background-color: #55f77d;
+	color: rgb(82, 142, 150);
+	background-color: #92a4c7;
 	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
+	box-shadow: inset 0px 3px 0 rgba(255,255,255,0.3), 0 3px 3px rgba(0, 0, 0, 0.3);
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
   }
   button.btn--sw {
-	border-radius: 100%;
+	border-radius: 50%;
 	line-height: 30px;		/*行間*/
 	width: 190px;
 	height: 190px;
@@ -152,10 +163,12 @@ button.btn--humanity {
 	top: 30%;
 	font-size: 18px;
 	text-align: center;
-	color: #fff;
-	background-color: #f886e9;
+	color: rgb(82, 142, 150);
+	background-color: #d887cd;
 	-webkit-box-shadow: 0 5px 0 #e6d900;
 	box-shadow: 0 5px 0 #e6d900;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.65);
   }
   /* :hoverは疑似クラスの一つで、マウスポインタを要素の上に置いているとき実行される
   	　疑似クラス = 要素が特定の状態になっているときだけ実行される*/
