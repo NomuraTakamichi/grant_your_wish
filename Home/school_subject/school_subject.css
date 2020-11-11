@@ -6,8 +6,8 @@ body {
     text-decoration: none;
   }
   
-  .tonari-tabs,
-  .tonari-slide {
+  .school-tabs,
+  .school-slide {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,53 +17,48 @@ body {
     height: 100vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
     position: relative;
     background: #eee;
+  }
+  .school-slide h1 {
     text-align: center;
-    padding: 0 2em;
-  }
-  h1 {
     font-size: 2rem;
-    margin: 0;
+    margin-bottom: 50px;
     letter-spacing: 1rem;
-  }
-  h3 {
-    font-size: 1rem;
-    letter-spacing: 0.3rem;
-    opacity: 0.6;
-  }
-  
-  .line_container{
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    height: 100%;
-    width: 210px;
-    position: fixed;
-    left: 0;
-    top: 70px;
-    background: #eee;
-  }
-  .line-container:hover{
-    position: fixed;
-    left: 0;
-    top: 70px;
     
   }
-  .line-tab {
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    flex: 1;
-    color: rgb(109, 105, 105);
-    letter-spacing: 0.1rem;
-    transition: all 0.5s ease;
-    font-size: 1rem;
+            /*------------------introduction box-----------------------*/
+  .box {
+    width: 500px;
+    height: auto;
+    position: relative;
+    text-align: left;
+    padding:0.25em 1em;
   }
-  .line-tab:hover {
-    color:rgb(231, 224, 181);
-    background: #e2d58b;
-    transition: all 0.5s ease;
+  .box:before,.box:after{ 
+      content:'';
+      width: 20px;
+      height: 30px;
+      position: absolute;
+      display: inline-block;
   }
-  .tonari-container {
+  .box:before{
+      border-left: solid 1px #5767bf;
+      border-top: solid 1px #5767bf;
+      top:0;
+      left: 0;
+  }
+  .box:after{
+      border-right: solid 1px #5767bf;
+      border-bottom: solid 1px #5767bf;
+      bottom:0;
+      right: 0;
+  }
+  .box p {
+    font-size: 13px;
+    margin: 0; 
+    padding: 0;
+  }
+    
+  .school-container {
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -74,11 +69,11 @@ body {
     background:#fff;
     z-index: 10;
   }
-  .tonari-container:hover{
+  .school-container:hover{
     position: fixed;
     top: 0;
   }
-  .tonari-tab {
+  .school-tab {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +83,7 @@ body {
     transition: all 0.5s ease;
     font-size: 0.8rem;
   }
-  .tonari-tab:hover {
+  .school-tab:hover {
     color:rgb(243, 238, 211);
     background: #e2d58b;
     transition: all 0.5s ease;
@@ -144,18 +139,18 @@ body {
     
     @media screen and (min-width: 768px) {
       .page-wrap.tog .page-content {
-        padding-left: 250px;
+        padding-left: 220px;
       }
     }
     /*----------------leftbar-wrap----------------*/
     
     .leftbar-wrap {
-      width: 260px;
+      width: 210px;
       height: 100%;
       max-height: 100%;
       position: fixed;
-      top: 70px;
-      left: -250px;
+      top: 100px;
+      left: -220px;
       z-index: 999;
     }
     
@@ -173,25 +168,25 @@ body {
     /*---------------------------main----------------------------*/
 
     .main .home{
-        background-color: #f3e9ae;
+        background-color: #f3eed0;
     }
     .main .social{
-        background-color: #f3a310;
+      background-color: #f5f4bc;
     }
     .main .business{
-        background-color: aqua;
+        background-color: rgb(221, 250, 250);
     }
     .main .health{
-        background-color: pink;
+        background-color: rgb(252, 230, 234);
     }
     .main .theology{
-        background-color: #91812b;
+        background-color: #fdfae5;
     }
     .main .engineer{
-        background-color: #b375a0;
+        background-color: #f8cfec;
     }
     .main .sw{
-        background-color: chartreuse;
+        background-color: rgb(231, 243, 220);
     }
     /*----------------------leftbar-menu-------------------------*/
     
@@ -205,19 +200,24 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 30px;
+      padding-top: 25px;
+      padding-bottom: 10px;
       color: rgb(13, 14, 13);
+      /* border line */
+      transform: translateX(10%);/*位置調整*/
+      border-length: 30px;
+      border-radius: 5px;
+      border-bottom: solid 5px rgb(117, 198, 245);
     }
     
-    .leftbar-wrap .leftbar-menu ul li a {
+    .leftbar-wrap .leftbar-menu ul a {
       display: inline-block;
       width: 100%;
       text-decoration: none;
       position: relative;
       padding: 8px 20px 10px 20px; /*padding: 上、右、下、左*/
     }
-    
-    .leftbar-wrap .leftbar-menu ul li a i {
+    .leftbar-wrap .leftbar-menu ul a i {
       margin-right: 10px;
       font-size: 11px;
       width: 30px;
@@ -228,9 +228,9 @@ body {
     }
 
     .leftbar-wrap .leftbar-menu span {
-        font-size: 14px;
+      font-size: 14px;
+      
     }
-    
     .leftbar-wrap .leftbar-menu ul li a:hover > i::before {
       display: inline-block;
       animation: swing ease-in-out 0.5s 1 alternate;
@@ -254,14 +254,22 @@ body {
     }
     
     .leftbar-wrap .leftbar-menu .leftbar-dropdown .leftbar-submenu ul {
-      padding: 5px 0;
+      padding-left: 25px;
     }
     
     .leftbar-wrap .leftbar-menu .leftbar-dropdown .leftbar-submenu li {
-      padding-left: 25px;
       font-size: 13px;
+      margin-bottom: 15px;
+      background: #fff;
     }
-    
+    .leftbar-wrap .leftbar-menu .leftbar-dropdown .leftbar-submenu li :hover{     
+      color:rgb(20, 20, 20);
+      background: #e2d58b;
+      -webkit-transform: translate(0, 3px);
+      transform: translate(0, 3px);
+      -webkit-box-shadow: 0 2px 0 #9e9e9b;
+      box-shadow: 0 2px 0 #64f7f7;
+    }
     .leftbar-wrap .leftbar-menu .leftbar-dropdown .leftbar-submenu li a:before {
       content: "\f111";
       font-weight: 400;
@@ -275,19 +283,6 @@ body {
       font-size: 8px;
     }
     
-    .leftbar-wrap .leftbar-menu ul li a span.label,
-    .leftbar-wrap .leftbar-menu ul li a span.badge {
-      float: right;
-      margin-top: 8px;
-      margin-left: 5px;
-    }
-    
-    .leftbar-wrap .leftbar-menu .leftbar-dropdown .leftbar-submenu li a .badge,
-    .leftbar-wrap .leftbar-menu .leftbar-dropdown .leftbar-submenu li a .label {
-      float: right;
-      margin-top: 0px;
-    }
-    
     .leftbar-wrap .leftbar-menu .leftbar-submenu {
       display: none;
     }
@@ -297,13 +292,4 @@ body {
       right: 17px;
     }
     
-    /*-----------------------------wrapper-------------------------------------------------*/
-   
-    .wrapper .leftbar-wrap ul li:hover a i,
-    .wrapper .leftbar-wrap .leftbar-dropdown .leftbar-submenu li a:hover:before,
-    .wrapper .leftbar-wrap .sidebar-search input.search-menu:focus+span,
-    .wrapper .leftbar-wrap .leftbar-menu .leftbar-dropdown.active a i {
-        color: #b375a0;
-        text-shadow:0px 0px 10px rgba(151, 150, 147, 0.5);
-    }
     
