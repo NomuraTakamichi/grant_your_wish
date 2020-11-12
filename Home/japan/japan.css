@@ -1,0 +1,69 @@
+body {
+}
+/*----------------------------top tag---------------------------*/
+ .japan-container {
+    font-family: "Century Gothic", 'Lato', sans-serif;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 0 20px rgba(48, 176, 235, 0.1);
+    background:#fff;
+    z-index: 10;
+  }
+  .japan-container:hover{
+    position: fixed;
+    top: 0;
+  }
+  .japan-tab0 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 150px;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 20px;
+  }
+  .japan-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 0.8rem;
+  }
+  .japan-tab:hover {
+    color:rgb(243, 238, 211);
+    background: #e2d58b;
+    transition: all 0.5s ease;
+  }
+  
+/*-----------------------main---------------------------*/
+.japan-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-color: white;
+    color: rgb(247, 247, 162);
+}
+.japan-slide .first{
+    padding-right: 50px;
+    padding-bottom: 30px;
+    font-size: 1.8rem;
+}
+.japan-slide .last{
+    padding-left: 50px;
+    padding-top: 30px;
+    font-size: 1.8rem;
+}
+
+

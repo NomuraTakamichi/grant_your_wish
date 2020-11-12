@@ -7,29 +7,128 @@ a {
   text-decoration: none;
 }
 
+/*----------------------------Main text-----------------------------*/
 .et-hero-tabs,
 .slide {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;/*横*/
+  align-items: center;  /*縦*/
   height: 100vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
   position: relative;
   background: #eee;
   text-align: center;
   padding: 0 2em;
 }
-h1 {
-  font-size: 2rem;
+.slide h1 {
+  font-size: 2.3rem;
   margin: 0;
   letter-spacing: 1rem;
 }
-h3 {
-  font-size: 1rem;
+.slide h3 {
+  margin-top:50px;
+  font-size: 1.3rem;
   letter-spacing: 0.3rem;
   opacity: 0.6;
 }
+.slide-ja {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	height: 100vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+	position: relative;
+	background: #eee;
+  }
+  .slide-ja h1 {
+	margin-left: 20%;
+	font-size: 2.5rem;
+	letter-spacing: 1rem;
+  }
+  .slide-ja p {
+	margin-left: 20%;
+	font-size: 1rem;
+	letter-spacing: 0.3rem;
+	opacity: 0.6;
+  }
+  .slide-ja h3 {
+	margin-left: 20%;
+	font-size: 1.5rem;
+	letter-spacing: 0.3rem;
+	opacity: 0.6;
+  }
+  .slide-hj {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+	position: relative;
+	background: #eee;
+	padding: 0 2em;
+  }
+  .slide-hj h1 {
+	justify-content: flex-end;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	margin-right: 40%;
+	margin-top: 10%;
+	font-size: 2.5rem;
+	letter-spacing: 1rem;
+  }
+  .slide-hj h3 {
+	justify-content: center;
+	margin-top: -10%;
+	font-size: 1.5rem;
+	letter-spacing: 0.3rem;
+	opacity: 0.6;
+  }
+  .main .slide-sc {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;/*横: flex-end:end揃え*/
+	align-items: center;  /*縦*/
+	height: 100vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+	position: relative;
+	background: #eee;
+	padding: 0 2em;
+  }
+  .main .slide-sc h1 {
+	font-size: 2rem;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	letter-spacing: 1rem;
+  }
+  .main .slide-sc h3 {
+	margin-right: 200px;
+	font-size: 1rem;
+	letter-spacing: 0.3rem;
+	opacity: 0.6;
+  }
 
+  .slide-to {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+	position: relative;
+	background: #eee;
+	padding: 0 2em;
+  }
+  .slide-to h1 {
+	text-align: left;
+	margin-left: 70px;
+	margin-bottom: 70px;
+	font-size: 2rem;
+	letter-spacing: 1rem;
+  }
+  .slide-to h3 {
+	text-align: center;
+	margin-left: 70px;
+	font-size: 1rem;
+	letter-spacing: 0.3rem;
+	opacity: 0.6;
+  }
 
 .tabs-container {
   display: flex;
@@ -45,6 +144,18 @@ h3 {
 .tabs-container:hover{
   position: fixed;
   top: 0;
+}
+.tab0 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 150px;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 20px;
 }
 .tab {
   display: flex;

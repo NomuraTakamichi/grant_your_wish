@@ -5,7 +5,7 @@ body {
 a {
   text-decoration: none;
 }
-
+/*----------------------------Main box----------------------------*/
 .tonari-tabs,
 .tonari-slide {
   display: flex;
@@ -20,11 +20,28 @@ a {
   text-align: center;
   padding: 0 2em;
 }
+.tonari2-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 200vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+  position: relative;
+  background: #eee;
+  text-align: center;
+  padding: 0 2em;
+}
 h1 {
   font-size: 2rem;
   margin: 0;
   letter-spacing: 1rem;
   margin-bottom: 50px;
+}
+.rest .box h3{
+  text-align: center;
+  font-size: 20px;
 }
 /*------------------introduction box-----------------------*/
 .box {
@@ -58,7 +75,7 @@ h1 {
   margin: 0; 
   padding: 0;
 }
-
+/*----------------------------top tag---------------------------*/
 .tonari-container {
   display: flex;
   flex-direction: row;
@@ -73,6 +90,18 @@ h1 {
 .tonari-container:hover{
   position: fixed;
   top: 0;
+}
+.tonari-tab0 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 150px;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 20px;
 }
 .tonari-tab {
   display: flex;
@@ -89,15 +118,6 @@ h1 {
   background: #e2d58b;
   transition: all 0.5s ease;
 }
-.tab-slider {
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 6px;
-  background: #e2d58b;
-  transition: else 0.3s ease;
-}
-
 @keyframes swing {
   0% {transform: rotate(0deg);}
   10% {transform: rotate(10deg);}
@@ -109,7 +129,6 @@ h1 {
   80% {transform: rotate(-5deg);}
   100% {transform: rotate(0deg);}
 }
-
 @keyframes sonar {
   0% {transform: scale(0.9);opacity: 1;}
   100% {transform: scale(2);opacity: 0;}

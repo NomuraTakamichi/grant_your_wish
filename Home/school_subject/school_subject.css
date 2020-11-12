@@ -5,7 +5,7 @@ body {
   a {
     text-decoration: none;
   }
-  
+  /*------------------------Main box------------------------*/
   .school-tabs,
   .school-slide {
     display: flex;
@@ -18,14 +18,47 @@ body {
     position: relative;
     background: #eee;
   }
-  .school-slide h1 {
+  .school2-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 200vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+    position: relative;
+    background: #eee;
+  }
+  h1 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 50px;
     letter-spacing: 1rem;
     
   }
-            /*------------------introduction box-----------------------*/
+  /*---------------------------main box color----------------------------*/
+  .main .home{
+    background-color: #f3eed0;
+  }
+  .main .social{
+    background-color: #f5f4bc;
+  }
+  .main .business{
+    background-color: rgb(221, 250, 250);
+  }
+  .main .health{
+    background-color: rgb(252, 230, 234);
+  }
+  .main .theology{
+    background-color: #fdfae5;
+  }
+  .main .engineer{
+    background-color: #f8cfec;
+  }
+  .main .sw{
+    background-color: rgb(231, 243, 220);
+  }
+  /*------------------introduction box-----------------------*/
   .box {
     width: 500px;
     height: auto;
@@ -57,7 +90,7 @@ body {
     margin: 0; 
     padding: 0;
   }
-    
+  /*--------------------------- top tag ----------------------------*/
   .school-container {
     display: flex;
     flex-direction: row;
@@ -72,6 +105,18 @@ body {
   .school-container:hover{
     position: fixed;
     top: 0;
+  }
+  .school-tab0 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 150px;
+    flex: 1;
+    color: #000;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s ease;
+    font-size: 20px;
   }
   .school-tab {
     display: flex;
@@ -88,15 +133,6 @@ body {
     background: #e2d58b;
     transition: all 0.5s ease;
   }
-  .tab-slider {
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 6px;
-    background: #e2d58b;
-    transition: else 0.3s ease;
-  }
-  
   @keyframes swing {
     0% {transform: rotate(0deg);}
     10% {transform: rotate(10deg);}
@@ -108,7 +144,6 @@ body {
     80% {transform: rotate(-5deg);}
     100% {transform: rotate(0deg);}
   }
-  
   @keyframes sonar {
     0% {transform: scale(0.9);opacity: 1;}
     100% {transform: scale(2);opacity: 0;}
@@ -129,7 +164,7 @@ body {
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
-    }
+  }
   
     /*----------------toggeled sidebar----------------*/
     
@@ -165,29 +200,6 @@ body {
       color: #96938b;
     }
     
-    /*---------------------------main----------------------------*/
-
-    .main .home{
-        background-color: #f3eed0;
-    }
-    .main .social{
-      background-color: #f5f4bc;
-    }
-    .main .business{
-        background-color: rgb(221, 250, 250);
-    }
-    .main .health{
-        background-color: rgb(252, 230, 234);
-    }
-    .main .theology{
-        background-color: #fdfae5;
-    }
-    .main .engineer{
-        background-color: #f8cfec;
-    }
-    .main .sw{
-        background-color: rgb(231, 243, 220);
-    }
     /*----------------------leftbar-menu-------------------------*/
     
     .leftbar-wrap .leftbar-menu {
@@ -200,8 +212,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 25px;
-      padding-bottom: 10px;
+      padding-bottom: 5px;
       color: rgb(13, 14, 13);
       /* border line */
       transform: translateX(10%);/*位置調整*/
@@ -259,7 +270,7 @@ body {
     
     .leftbar-wrap .leftbar-menu .leftbar-dropdown .leftbar-submenu li {
       font-size: 13px;
-      margin-bottom: 15px;
+      margin-bottom: 2px;
       background: #fff;
     }
     .leftbar-wrap .leftbar-menu .leftbar-dropdown .leftbar-submenu li :hover{     
