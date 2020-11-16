@@ -203,7 +203,12 @@ body {
     /*----------------------leftbar-menu-------------------------*/
     
     .leftbar-wrap .leftbar-menu {
-      padding: 0px;
+      margin-top: -30px;
+      margin-right: -50px;
+      padding-top: 30px;
+      padding-right: 50px;
+      height: 100vh;
+      background-color: rgb(225, 228, 230);
     }
     
     .leftbar-wrap .leftbar-menu .header-menu span {
@@ -240,7 +245,6 @@ body {
 
     .leftbar-wrap .leftbar-menu span {
       font-size: 14px;
-      
     }
     .leftbar-wrap .leftbar-menu ul li a:hover > i::before {
       display: inline-block;
@@ -270,6 +274,7 @@ body {
     
     .leftbar-wrap .leftbar-menu .leftbar-dropdown .leftbar-submenu li {
       font-size: 13px;
+      padding-right: 20px;
       margin-bottom: 2px;
       background: #fff;
     }

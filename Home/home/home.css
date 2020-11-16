@@ -46,8 +46,9 @@ a {
 	letter-spacing: 1rem;
   }
   .slide-ja p {
+	font-weight: bold;
 	margin-left: 20%;
-	font-size: 1rem;
+	font-size: 1.3rem;
 	letter-spacing: 0.3rem;
 	opacity: 0.6;
   }
@@ -78,11 +79,11 @@ a {
   .slide-hj h3 {
 	justify-content: center;
 	margin-top: -10%;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	letter-spacing: 0.3rem;
 	opacity: 0.6;
   }
-  .main .slide-sc {
+  .slide-sc {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;/*横: flex-end:end揃え*/
@@ -92,15 +93,15 @@ a {
 	background: #eee;
 	padding: 0 2em;
   }
-  .main .slide-sc h1 {
+  .slide-sc h1 {
 	font-size: 2rem;
 	margin-right: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	letter-spacing: 1rem;
   }
-  .main .slide-sc h3 {
+  .slide-sc h3 {
 	margin-right: 200px;
-	font-size: 1rem;
+	font-size: 1.3rem;
 	letter-spacing: 0.3rem;
 	opacity: 0.6;
   }
@@ -118,14 +119,14 @@ a {
   .slide-to h1 {
 	text-align: left;
 	margin-left: 70px;
-	margin-bottom: 70px;
+	margin-bottom: 55px;
 	font-size: 2rem;
 	letter-spacing: 1rem;
   }
   .slide-to h3 {
 	text-align: center;
-	margin-left: 70px;
-	font-size: 1rem;
+	margin-left: 55px;
+	font-size: 1.3rem;
 	letter-spacing: 0.3rem;
 	opacity: 0.6;
   }
@@ -157,6 +158,10 @@ a {
   transition: all 0.5s ease;
   font-size: 20px;
 }
+.tab0 img{
+	height: 70px;
+	width: 150px;
+}
 .tab {
   display: flex;
   justify-content: center;
@@ -180,6 +185,7 @@ a {
   background: #e2d58b;
   transition: else 0.3s ease;
 }
+
 
   /*	button	 */
 button.btn--humanity {
@@ -289,4 +295,3 @@ button.btn--humanity {
 	-webkit-box-shadow: 0 2px 0 #e6d900;
 	box-shadow: 0 2px 0 #e6d900;
   }
-  

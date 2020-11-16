@@ -1,204 +1,169 @@
-.tab-wrap {
-	background: rgb(230, 228, 169);
-	box-shadow: 0 0 5px rgba(0,0,0,.1);
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-	padding: 0 0 0px;
-}
-.subject {
-	max-width: 1000px;
-	max-height: 1000px;
-}
-
-.tab-label {
-	color: rgb(146, 145, 145);
-	cursor: pointer;
-	flex: 1;
-	font-weight: bold;
-	order: -1;
-	padding: 12px 24px;
-    position: relative;
-	text-align: center;
-	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s;
-	user-select: none;
-	white-space: nowrap;
-	-webkit-tap-highlight-color: transparent;
-}
-
-.tab-label:hover {
-	background: rgb(230, 228, 169);
-}
-
-.tab-switch:checked + .tab-label {
-	color: DeepSkyBlue;
-}
-
-.tab-label::after {
-	background: DeepSkyBlue;
-	bottom: 0;
-	content: '';
-	display: block;
-	height: 3px;
-	left: 0;
-	opacity: 0;
-	pointer-events: none;
-	position: absolute;
-	transform: translateX(100%);
-	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s 80ms;
-	width: 100%;
-    z-index: 1;
-    order: -1;
-}
-
-.tab-switch:checked ~ .tab-label::after {
-	transform: translateX(-100%);
-}
-
-.tab-switch:checked + .tab-label::after {
-	opacity: 1;
-	transform: translateX(0);
-}
-
-.tab-content {
-	opacity:0;
-	padding: 0 20px;
-	pointer-events:none;
-	transform: translateX(-30%);
-	transition: transform .3s 80ms, opacity .3s 80ms;
-	max-width: 100%;
-	max-height: auto;
-}
-
-.tab-switch:checked ~ .tab-content {
-	transform: translateX(30%);
-}
-
-.tab-switch:checked + .tab-label + .tab-content {
-	opacity: 1;
-	order: 1;
-	pointer-events:auto;
-	transform: translateX(0);
-}
-
-.tab-wrap::after {
-	content: '';
-	height: 0px;
-	order: -1;
-	width: 100%;
-	height: auto;
-}
-
-.tab-switch {
-	display: none;
-}
-
-/* ============================== */
-
 body {
-	background: rgb(230, 228, 169);
-    font-family: sans-serif;
-	margin: 0px;
-}
+	font-family: "Century Gothic", 'Lato', sans-serif;
+  }
+
+  
+/*---------------------------alpha----------------------------*/
+.tonari-slide-alpha {
+    display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    height: 200vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+    position: relative;
+    background: #eee;
+  }
+  .tonari-slide-alpha h1 {
+	padding-left: 40%;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
+
+  .box-alpha {
+    transform: translate(140%,-120%); /* transform : translate(横、縦) → 垂直・水平方向に移動 */
+    width: 600px;
+    height: auto;
+    box-sizing: border-box; /*はみ出た部分まで入れる*/
+    /* overflow: hidden; はみ出た部分非表示*/
+    position: relative;
+    text-align: left;
+    padding:0.25em 1em;
+  }
+  .box-alpha:before,.box-alpha:after{ 
+    content:'';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+  }
+  .box-alpha:before{
+    border-left: solid 1px #5767bf;
+    border-top: solid 1px #5767bf;
+    top:0;
+    left: 0;
+  }
+  .box-alpha:after{
+    border-right: solid 1px #5767bf;
+    border-bottom: solid 1px #5767bf;
+    bottom:0;
+    right: 0;
+  }
+  .box-alpha p {
+    font-size: 13px;
+  }
+
+  .j-alpha .alpha1 {
+	padding-top: 10%;
+    padding-left: 15%;
+    flex-direction: column;
+    width: 550px;
+    height: 350px;
+    transform: rotate(-4deg); /* 回転させる */
+  }
+  .j-alpha .alpha2 {
+	padding-left: 15%;
+	margin-top: 10%;
+    flex-direction: column;
+    width: 250px;
+    height: 150px;
+    transform: rotate(-2deg); /* 回転させる */
+  }
+  .j-alpha .alpha3 {
+    padding-left: 25%;
+	margin-top: 10%;
+    flex-direction: column;
+    width: 250px;
+    height: 150px;
+    transform: rotate(2deg); /* 回転させる */
+  }
+  .j-alpha .alpha4 {
+    padding-left: 20%;
+	padding-top: 8%;
+    flex-direction: column;
+    width: 250px;
+    height: 150px;
+    transform: rotate(4deg); /* 回転させる */
+    margin-bottom: -15%;
+  }
 
 
-button.btn--humanity {
-	border-radius: 100%;
-	line-height: 30px;		/*行間*/
-	width: 190px;
-	height: 190px;
+  /*----------------------------Main box----------------------------*/
+  .tonari-tabs,
+  .tonari-slide {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	width: 100%;
+	height: 100vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
 	position: relative;
-	top: 140px;
-	left: 20px;
-	padding: 0;				/*余白*/
-	font-size: 18px;
-	text-align: center;
-	color: #fff;
-	background-color: #e6d900;
-	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
+	background: #eee;
+	padding: 0 2em;
   }
-  button.btn--global {
-	border-radius: 100%;
-	line-height: 30px;		/*行間*/
-	width: 190px;
-	height: 190px;
+  .tonari2-slide {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	width: 100%;
+	height: 200vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
 	position: relative;
-	top: 310px;
-	padding: 20px;				/*余白*/
-	font-size: 15px;
-	text-align: center;
-	color: #fff;
-	background-color: #e6d900;
-	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
+	background: #eee;
+	padding: 0 2em;
   }
-  button.btn--theology {
-	border-radius: 100%;
-	line-height: 30px;		/*行間*/
-	width: 190px;
-	height: 190px;
-	position: relative;
-	top: 240px;
-	padding: 20px;				/*余白*/
-	font-size: 18px;
-	text-align: center;
-	color: #fff;
-	background-color: #e6d900;
-	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
+  h1 {
+	font-size: 2rem;
+	margin: 0;
+	letter-spacing: 1rem;
+	margin-bottom: 50px;
   }
-  button.btn--health {
-	border-radius: 100%;
-	line-height: 30px;		/*行間*/
-	width: 190px;
-	height: 190px;
-	position: relative;
-	top: 50px;
-	padding: 20px;				/*余白*/
-	font-size: 18px;
-	text-align: center;
-	color: #fff;
-	background-color: #e6d900;
-	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
+  .rest .box h3{
+	font-size: 20px;
   }
-  button.btn--engineer {
-	border-radius: 100%;
-	line-height: 30px;		/*行間*/
-	width: 190px;
-	height: 190px;
-	position: relative;
-	top: 150px;
-	padding: 20px;				/*余白*/
-	font-size: 18px;
-	text-align: center;
-	color: #fff;
-	background-color: #e6d900;
-	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
+  
+  /*----------------------------top tag---------------------------*/
+  .tonari-container {
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 70px;
+	box-shadow: 0 0 20px rgba(48, 176, 235, 0.1);
+	background:#fff;
+	z-index: 10;
   }
-  button.btn--sw {
-	border-radius: 100%;
-	line-height: 30px;		/*行間*/
-	width: 190px;
-	height: 190px;
-	position: relative;
-	top: 200px;
-	left: 550px;
-	padding: 0,0,10px;
-	font-size: 18px;
-	text-align: center;
-	color: #fff;
-	background-color: #e6d900;
-	-webkit-box-shadow: 0 5px 0 #e6d900;
-	box-shadow: 0 5px 0 #e6d900;
+  .tonari-container:hover{
+	position: fixed;
+	top: 0;
   }
-  /* :hoverは疑似クラスの一つで、マウスポインタを要素の上に置いているとき実行される
-  	　疑似クラス = 要素が特定の状態になっているときだけ実行される*/
-  button.btn--circle:hover {
-	-webkit-transform: translate(0, 3px);
-	transform: translate(0, 3px);
-	-webkit-box-shadow: 0 2px 0 #e6d900;
-	box-shadow: 0 2px 0 #e6d900;
+  .tonari-tab0 {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	margin-left: 100px;
+	margin-right: 150px;
+	flex: 1;
+	color: #000;
+	letter-spacing: 0.1rem;
+	transition: all 0.5s ease;
+	font-size: 20px;
+  }
+  .tonari-tab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	color: #000;
+	letter-spacing: 0.1rem;
+	transition: all 0.5s ease;
+	font-size: 0.8rem;
+  }
+  .tonari-tab:hover {
+	color:rgb(243, 238, 211);
+	background: #e2d58b;
+	transition: all 0.5s ease;
   }

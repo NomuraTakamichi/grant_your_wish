@@ -1,4 +1,5 @@
 body {
+    font-family: "Century Gothic", 'Lato', sans-serif;
 }
 /*----------------------------top tag---------------------------*/
  .japan-container {
@@ -35,7 +36,6 @@ body {
     flex: 1;
     color: #000;
     letter-spacing: 0.1rem;
-    /*transition: all 0.5s ease;*/
     font-size: 0.8rem;
   }
   .japan-tab:hover {
@@ -55,13 +55,6 @@ body {
     color: rgb(247, 247, 162);
 }
 .japan-slide .first{
-    padding-right: 50px;
-    padding-bottom: 30px;
-    font-size: 1.8rem;
-}
-.japan-slide .last{
-    padding-left: 50px;
-    padding-top: 30px;
     font-size: 1.8rem;
 }
 

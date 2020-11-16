@@ -1,0 +1,152 @@
+  /*--------------------------- home ----------------------------*/
+  .main .home {
+    display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    height: 100vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+    position: relative;
+    background: rgb(209, 207, 207);
+}
+  .main .home h1 {
+    color: black;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
+
+/*---------------------------alpha----------------------------*/
+.tonari-slide-alpha {
+    display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    height: 200vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+    position: relative;
+    /*background: #eee;*/
+    background-image: url("image/alpha_background.jpg");
+  }
+  .tonari-slide-alpha h1 {
+    color: rgb(58, 56, 56);
+	padding-left: 40%;
+    font-size: 2.3rem;
+    letter-spacing: 1rem;
+  }
+
+  .box-alpha {
+    transform: translate(140%,-90%); /* transform : translate(横、縦) → 垂直・水平方向に移動 */
+    width: 600px;
+    height: auto;
+    box-sizing: border-box; /*はみ出た部分まで入れる*/
+    /* overflow: hidden; はみ出た部分非表示*/
+    position: relative;
+    text-align: left;
+    padding:0.25em 1em;
+  }
+  .box-alpha:before,.box-alpha:after{ 
+    content:'';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+  }
+  .box-alpha:before{
+    border-left: solid 1px #5767bf;
+    border-top: solid 1px #5767bf;
+    top:0;
+    left: 0;
+  }
+  .box-alpha:after{
+    border-right: solid 1px #5767bf;
+    border-bottom: solid 1px #5767bf;
+    bottom:0;
+    right: 0;
+  }
+  .box-alpha p {
+    font-size: 13px;
+  }
+  .j-alpha{
+    flex-direction: column;
+  }
+  .j-alpha .alpha1 {
+	padding-top: 5%;
+    padding-left: 10%;
+    margin-bottom: 50px;
+    width: 650px;
+    height: 450px;
+    transform: rotate(-4deg);  /*回転させる */
+  }
+  .j-alpha .alpha2 {
+	padding-left: 15%;
+	margin-top: 5%;
+    width: 250px;
+    height: 150px;
+    transform: rotate(-2deg);  /*回転させる */
+  }
+  .j-alpha .alpha3 {
+    padding-left: 30%;
+	margin-top: 10%;
+    width: 250px;
+    height: 150px;
+    transform: rotate(2deg);  /*回転させる */
+  }
+  .j-alpha .alpha4 {
+    padding-left: 20%;
+	padding-top: 5%;
+    width: 300px;
+    height: 200px;
+    transform: rotate(-4deg);  /*回転させる */
+    margin-bottom: -15%;
+  }
+
+  /*--------------------------- All ----------------------------*/
+.tonari-slide {
+    display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+    position: fixed;
+    width: 100%;
+    height: 200vh;		/*vh：高さに対する割合。100vhは画面の高さと同じ（100%）*/
+    position: relative;
+    background: #eee;
+}
+  .tonari-slide h1 {
+    color: black;
+    text-shadow: chartreuse;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+  }
+
+  .box {
+    width: 600px;
+    height: auto;
+    box-sizing: border-box; /*はみ出た部分まで入れる*/
+    /* overflow: hidden; はみ出た部分非表示*/
+    position: relative;
+    text-align: left;
+    padding:0.25em 1em;
+  }
+  .box:before,.box:after{ 
+    content:'';
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+  }
+  .box:before{
+    border-left: solid 1px #5767bf;
+    border-top: solid 1px #5767bf;
+    top:0;
+    left: 0;
+  }
+  .box:after{
+    border-right: solid 1px #5767bf;
+    border-bottom: solid 1px #5767bf;
+    bottom:0;
+    right: 0;
+  }
+  .box p {
+    font-size: 13px;
+  }
+/*----------------------*/
